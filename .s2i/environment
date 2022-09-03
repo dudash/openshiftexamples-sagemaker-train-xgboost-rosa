@@ -1,0 +1,1 @@
+MODEL_PATH=https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/blob/4e33e9309a38874a783959013c644720f14aefb0/test/example-sagemaker-xgboost-model.tar.gz
