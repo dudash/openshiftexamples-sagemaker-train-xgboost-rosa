@@ -1,1 +1,1 @@
-MODEL_PATH=https://raw.githubusercontent.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/main/test/README.md
+MODEL_PATH=https://raw.githubusercontent.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/main/test/example-sagemaker-xgboost-model.tar.gz
