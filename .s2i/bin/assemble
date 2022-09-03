@@ -1,13 +1,29 @@
 #!/bin/bash
 echo "Before assembling"
 
+# We are getting a ML model from a networked location and pulling it in to the build env
+# typically this will be AWS S3 but support for HTTP is also in here
+
+echo $MODEL_PATH
+if [[ $MODEL_PATH == s3* ]]; then
+    # AWS_ACCESS_KEY_ID
+    # AWS_SECRET_ACCESS_KEY
+    # Pull using S3
+    # TODO
+    echo "fetching model from S3"
+else
+    # Pull using http 
+    echo "fetching model from HTTP URL"
+fi
+
+
 /usr/libexec/s2i/assemble
 rc=$?
 
 if [ $rc -eq 0 ]; then
-    echo "After successful assembling - TODO model from some S3 fixed location"
+    echo "Assemble success"
 else
-    echo "After failed assembling - TODO print error as to why"
+    echo "Assemble failed - TODO print error as to why"
 fi
 
 exit $rc
