@@ -20,6 +20,7 @@ TBD importing the notebook
 
 ### Deploying as an API into your ROSA cluster
 TBD setup triggers or manual deploy steps
+(note: the s2i/environment defines a default MODEL_PATH which you can override to choose a different model)
 
 ### Using OpenAPI docs to test the model
 TBD
