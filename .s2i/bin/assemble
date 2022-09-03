@@ -18,8 +18,9 @@ else
     echo "model pulled to $PWD"
 fi
 
-compressed_model = basename $MODEL_PATH
-tar -xvzf $compressed_model
+basename $MODEL_PATH
+GZ_FILE = basename $MODEL_PATH
+tar -xvzf *.gz
 
 /usr/libexec/s2i/assemble
 rc=$?
