@@ -33,6 +33,14 @@ def create_input_features_class(model):
 InputFeatures = create_input_features_class(model)
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    return {"message": "This is a ML prediction service but you are using the wrong path"}
+
+@app.get("/healthz")
+async def root():
+    return {"message": "Everything's shiny, Cap'n. Not to fret."}
+
 @app.post("/predict", response_model=List)
 async def predict_post(datas: List[InputFeatures]):
     return model.predict(np.asarray([list(data.__dict__.values()) for data in datas])).tolist()
