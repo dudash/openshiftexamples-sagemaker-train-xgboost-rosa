@@ -1,7 +1,8 @@
 # code started from here (2022-09-03):
 # credit to @Simon-Lind-glitch
 # https://gist.github.com/Simon-Lind-glitch/9c075fb37b9e1dc1921445a52451001e#file-app-py
-import pickle
+#import pickle
+import joblib
 from pydoc import locate
 from typing import List
 
@@ -10,7 +11,8 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-model = pickle.load(open("xgboost-model", "rb"))
+#model = pickle.load(open("xgboost-model", "rb"))
+model = joblib.load("xgboost-model")
 
 
 def create_type_instance(type_name: str):
