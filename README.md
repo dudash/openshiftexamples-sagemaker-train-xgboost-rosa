@@ -25,7 +25,7 @@ TBD setup triggers or manual deploy steps
 ### Using OpenAPI docs to test the model
 navigate to your exposed `ROUTE_URL/docs` and you should see a page like the screen shot below. It automatcially shows the model features and allows you to input test data to try the prediction service.
 
-![fastapi_try](https://raw.githubusercontent.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/.screens/fastapi_try.png)
+![fastapi_try](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/blob/main/.screens/fastapi_try.png)
 
 
 
