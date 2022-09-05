@@ -20,7 +20,10 @@ TBD importing the notebook
 
 ### Deploying as an API into your ROSA cluster
 TBD setup triggers or manual deploy steps
-(note: the s2i/environment defines a default MODEL_PATH which you can override to choose a different model)
+
+#### Environment variables
+The s2i builder expects some env vars, they are defaulted in the `.s2i/environment` file. You should override them in your CI/CD trigger or manually in your build config. The current set is:
+* MODEL_PATH - where to find your xgboost model (expected in `.tar.gz` format). Note: the build will accept s3: or http: paths.
 
 ### Using OpenAPI docs to test the model
 navigate to your exposed `ROUTE_URL/docs` and you should see a page like the screen shot below. It automatcially shows the model features and allows you to input test data to try the prediction service.
