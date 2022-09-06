@@ -1,4 +1,4 @@
-# SageMaker Studio and Red Hat OpenShift on AWS Example
+# SageMaker Studio and Red Hat OpenShift on AWS (ROSA) Example
 This is an example showcasing one simple way to connect SageMaker and ROSA.
 - hyperparameter tuning, training, and detecting bias using AWS Sage Maker Studio
 - containerizing and deploying to Red Hat OpenShift on AWS for scablable serving/inferencing
@@ -6,8 +6,10 @@ This is an example showcasing one simple way to connect SageMaker and ROSA.
 In terms of maturity we call this MLOps level 0. It is great for learning and demo but not recommended for production.
 If you are interested in more advanced MLOps reference architectures integrating AWS ML and OpenShift, [please see here]().
 
-## How this flow works from a people PoV
-Coming soon
+## How this flow works from a people point-of-view
+You can see in the diagram below (in this example) major activities are grouped to key capablity provided by cloud services. Data Prep and Modeling & Training happens in AWS SageMaker while Deployment & Integration plus Ops & Monitoring happens using ROSA. Obviously these major activities will break down into more discrete tasks, but hopefully this helps to orient you on the overview flow.
+![people_process](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/blob/main/.screens/people_process.png)
+
 
 ## Why MLOps maturity level 0?
 Coming soon
