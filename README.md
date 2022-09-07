@@ -12,7 +12,7 @@ You can see in the diagram below (in this example) major activities are grouped 
 
 
 ## Why MLOps maturity level 0?
-Simply put, there isn't enough automation and not enough repeatability in the flow to be at a higher maturity level. We do have a basic level of MLOps here though, we have the ability for a data scientist to retrain a model and even have that trigger the rebuild, containerization, and re-deployment of our prediction service. But it would be nice to leverage a feature store, a data prep pipeline, automated retraing, and feedback loop to get proudction data back into the training cycle. 
+Simply put, there isn't enough automation and not enough repeatability in the flow to be at a higher maturity level. We do have a basic level of MLOps here though, we have the ability for a data scientist to retrain a model and even have that trigger the rebuild, containerization, and re-deployment of our prediction service. But it would be nice to leverage a feature store, a data prep pipeline, automated retraing, and feedback loop to get production data back into the training cycle. 
 
 Granted MLOps maturity is a bit subjective we definitely can do a lot to improve what is being shown here.
 

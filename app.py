@@ -48,13 +48,17 @@ async def predict_post(datas: List[InputFeatures]):
     arrayofdata = np.asarray([list(data.__dict__.values()) for data in datas])
     print("nparraying it")
     print(arrayofdata)
+    arrayofdata = arrayofdata.reshape(1, -1)
+    print(arrayofdata)
     try:
         dmatrix = xgb.DMatrix(arrayofdata)
-        return model.predict(dmatrix).tolist()
+        print("dmatrixing it")
+        print(dmatrix)
+        return model.predict(arrayofdata).tolist()
     except Exception as e:
         print("Failed to predict on data with exception:\n{}".format(e))
     
-    return {"Error": "Failed to predict on data"}
+    return {"error": "Failed to predict on data"}
 
 if __name__ == "__main__":
     print(get_features_dict(model))
