@@ -6,6 +6,7 @@ import joblib
 from pydoc import locate
 from typing import List
 
+import xgboost as xgb
 import numpy as np
 import uvicorn
 from fastapi import FastAPI
@@ -45,7 +46,15 @@ async def root():
 async def predict_post(datas: List[InputFeatures]):
     print(datas)
     arrayofdata = np.asarray([list(data.__dict__.values()) for data in datas])
-    return model.predict(arrayofdata).tolist()
+    print("nparraying it")
+    print(arrayofdata)
+    try:
+        dmatrix = xgb.DMatrix(arrayofdata)
+        return model.predict(dmatrix).tolist()
+    except Exception as e:
+        print("Failed to predict on data with exception:\n{}".format(e))
+    
+    return {"Error": "Failed to predict on data"}
 
 if __name__ == "__main__":
     print(get_features_dict(model))
