@@ -1,6 +1,6 @@
-# SageMaker Studio and Red Hat OpenShift on AWS (ROSA) Example
+# SageMaker and Red Hat OpenShift on AWS (ROSA) Example
 This is an example showcasing one simple way to connect SageMaker and ROSA.
-- hyperparameter tuning, training, and detecting bias using AWS Sage Maker Studio
+- hyperparameter tuning, training, and detecting bias using AWS Sage Maker
 - containerizing and deploying to Red Hat OpenShift on AWS for scablable serving/inferencing
 
 In terms of maturity we call this MLOps level 0. It is great for learning and demo but not recommended for production.
@@ -17,11 +17,11 @@ Simply put, there isn't enough automation and not enough repeatability in the fl
 Granted MLOps maturity is a bit subjective we definitely can do a lot to improve what is being shown here.
 
 ## Running the example
-This example showcases a fraud detection prediction service. It trains on synthetically generated auto insurance claims that indicate if a claim was fradulent or not - a binary classification task. The data has lots of things like number or ppl injured, claim amount, customer gender, the state, if a police report is available, etc... You'll need an AWS account with the ability to use SageMaker Studio and also a ROSA cluster where the service will run.
+This example showcases a fraud detection prediction service. It trains on synthetically generated auto insurance claims that indicate if a claim was fradulent or not - a binary classification task. The data has lots of things like number or ppl injured, claim amount, customer gender, the state, if a police report is available, etc... You'll need an AWS account with the ability to use SageMaker and also a ROSA cluster where the service will run.
 
 Follow the guide below to recreate the environment and try this for yourself.
 
-### Model tuning and training in your SageMaker Studio
+### Model tuning and training in your SageMaker account
 TBD importing the notebook
 
 ### Deploying as an API into your ROSA cluster
