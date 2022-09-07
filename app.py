@@ -43,7 +43,7 @@ async def root():
 
 @app.post("/predict", response_model=List)
 async def predict_post(datas: List[InputFeatures]):
-    print datas
+    print(datas)
     arrayofdata = np.asarray([list(data.__dict__.values()) for data in datas])
     return model.predict(arrayofdata).tolist()
 
