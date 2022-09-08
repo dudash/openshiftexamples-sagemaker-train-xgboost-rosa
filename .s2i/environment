@@ -1,2 +1,2 @@
-# MODEL_PATH=https://raw.githubusercontent.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/main/test/example-sagemaker-xgboost-model.tar.gz
-MODEL_PATH=s3://sagemaker-us-east-1-546584748567/fraud-detect-demo/training_jobs/xgbtune-220907-1622-001-e9abcdf4/output/model.tar.gz
+MODEL_PATH=https://raw.githubusercontent.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/main/test/example-sagemaker-xgboost-model.tar.gz
+# MODEL_PATH=s3://sagemaker-us-east-1-546584748567/fraud-detect-demo/training_jobs/xgbtune-220907-1622-001-e9abcdf4/output/model.tar.gz
