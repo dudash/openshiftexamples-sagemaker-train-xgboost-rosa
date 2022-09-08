@@ -22,10 +22,20 @@ This example showcases a fraud detection prediction service. It trains on synthe
 Follow the guide below to recreate the environment and try this for yourself.
 
 ### Model tuning and training in your SageMaker account
-TBD importing the notebook
+1. Open the SageMaker console and [create a new notebook instance](https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-prepare.html) (defaults are fine)
+2. Once the notebook is available click the linke to Open JupyterHub
+3. Click the git icon on the left bar and clone [this repo](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa.git)
+4. Open the .ipynb from the file explorer and choose the conda_python3 kernel from the popup
+5. Run the notebook
 
 ### Deploying as an API into your ROSA cluster
-TBD setup triggers or manual deploy steps
+1. Open your ROSA developer webconsole
+2. Create a new project
+2. Click +Add, and choose Import from Git
+3. Paste in the details of [this repo](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa.git)
+4. It will auto populate some sane defaults, click Create
+5. Go to Builds, select the BuildConfig that was created, goto the Environment tab and add `MODEL_PATH` pointing to a preferred built model in S3 from your SageMaker training
+6. TBD setup automatic build triggers and event bridge
 
 #### Environment variables
 The s2i builder expects some env vars, they are defaulted in the `.s2i/environment` file. You should override them in your CI/CD trigger or manually in your build config. The current set is:
