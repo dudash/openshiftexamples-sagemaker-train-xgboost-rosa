@@ -12,7 +12,7 @@ echo $MODEL_PATH
 if [[ $MODEL_PATH == s3* ]]; then
     # Pull using S3
     echo "fetching model from S3"
-    aws s3 ls $MODEL_PATH
+    aws s3 cp $MODEL_PATH .
 else
     # Pull using http 
     echo "fetching model from HTTP URL"
