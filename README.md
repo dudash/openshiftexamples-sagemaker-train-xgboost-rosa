@@ -34,7 +34,7 @@ Follow the guide below to recreate the environment and try this for yourself.
 2. Click +Add, and choose Import from Git
 3. Paste in the details of [this repo](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa.git)
 4. It will auto populate some sane defaults, click Create
-5. Go to Builds, select the BuildConfig that was created, goto the Environment tab and add `MODEL_PATH` pointing to a preferred built model in S3 from your SageMaker training. 
+5. Go to Builds, select the BuildConfig that was created, goto the Environment tab and add `MODEL_PATH` pointing to a preferred built model in S3 from your SageMaker training. [Read about Sagemaker S3 paths here](https://docs.aws.amazon.com/sagemaker/latest/dg/model-train-storage.html). Note: with hyperparameter tuning, you can [ask SageMaker which model performed the best](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-monitor.html#automatic-model-tuning-best-training-job).
 6. TBD setup automatic build triggers and event bridge
 
 #### Environment variables
