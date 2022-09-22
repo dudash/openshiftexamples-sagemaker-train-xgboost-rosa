@@ -34,7 +34,7 @@ Follow the guide below to recreate the environment and try this for yourself.
 2. Click +Add, and choose Import from Git
 3. Paste in the details of [this repo](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa.git)
 4. It will auto populate some sane defaults, click Create
-5. Go to Builds, select the BuildConfig that was created, goto the Environment tab and add `MODEL_PATH` pointing to a preferred built model in S3 from your SageMaker training
+5. Go to Builds, select the BuildConfig that was created, goto the Environment tab and add `MODEL_PATH` pointing to a preferred built model in S3 from your SageMaker training. 
 6. TBD setup automatic build triggers and event bridge
 
 #### Environment variables
@@ -42,11 +42,14 @@ The s2i builder expects some env vars, they are defaulted in the `.s2i/environme
 * MODEL_PATH - where to find your xgboost model (expected in `.tar.gz` format). Note: the build will accept s3: or http: paths.
 
 ### Using OpenAPI docs to test the model
-navigate to your exposed `ROUTE_URL/docs` and you should see a page like the screen shot below. It automatcially shows the model features and allows you to input test data to try the prediction service.
+navigate to your exposed `ROUTE_URL/docs` and you should see a page like the screen shot below. It automatcially shows the model features and allows you to input test data to try the prediction service. You can find some example data to test with in the [test folder of this repo](https://github.com/redhat-na-ssa/openshiftexamples-sagemaker-train-xgboost-rosa/blob/main/test/example_features.json)
 
 ![fastapi_try](https://github.com/dudash/openshiftexamples-sagemaker-train-xgboost-rosa/blob/main/.screens/fastapi_try.png)
 
 
 
 ### Watching metrics in ROSA
-TBD
+There are several important metrics you might want to observe and be alerted around related to operationalizing a machine learning service like this. We can leverage the built in components of ROSA to set this up.
+ - TBD how to setup, Click +Add, and choose YAML paste in this URL...
+ - TODO screenshot
+ 
